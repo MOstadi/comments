@@ -8,10 +8,12 @@ use Laravelista\Comments\Events\CommentUpdated;
 use Laravelista\Comments\Events\CommentDeleted;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Config;
+use Nagy\LaravelRating\Traits\Like\Likeable;
 
 class Comment extends Model
 {
 	use SoftDeletes;
+	use Likeable;
 
     /**
      * The relations to eager load on every query.
